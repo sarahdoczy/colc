@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numbers Game | COLC</title>
+        <link rel="stylesheet" type="text/css" href="css/numbersGame.css" />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+        
+    </head>
+    
+    <body>
+        
+        <header>
+            <ul>
+                <li><a href="index.html">Home<span></span></a></li>
+                <li><a href="#" >Alphabet<span></span></a></li>                        
+                <li><a href="numbersGame.html" class="active">Numbers<span></span></a></li>
+                <li><a href="memoryGame.html" >Colors<span></span></a></li>
+                <li><a href="animalsFlipCard.html">Animals<span></span></a></li>
+            </ul>        
+	</header> 
+        
+            <button type="button" id="reset" onclick="onResetButtonClick()">Pick a new image</button>
+        
+            <div id="container">
+            
+               <div id="imgContainer"><img id="image" class="dropIn"></div>
+                   <br>
+                <h3>How many objects do you see in the picture?</h3>
+                <div id="numberSelection"></div>
+            
+        </div> <!-- /container -->
+       
+        <div id="resultBox"><h4 id="results"></h4></div>
+        
+        <script src="js/numbersGame.js"></script>
+        
+    </body>
+    
+</html>

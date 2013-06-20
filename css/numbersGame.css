@@ -1,0 +1,210 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+header {
+    position:absolute;
+    height:89px;
+    display:block;
+    padding:0 20px;
+    top:0px;
+    left:0px;
+    right:0px;
+    overflow-y:hidden;
+    background:#fff;
+    background:rgba(255, 255, 255, 0.97);
+    -webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
+    -moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
+    box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
+    
+}
+header ul {
+    float:right;
+    height:89px;
+}
+header ul li {
+    float:left;
+    margin-left:46px;
+    list-style: none;
+}
+header ul li a {
+	text-decoration:none;
+	display:block;
+	line-height:102px;
+	height:89px;
+	font-family:"proxima_nova_semibold",  'Helvetica Neue',  Arial,  Helvetica,  sans-serif;
+	font-size:100%;
+	color:#493e45;
+	position:relative;
+}
+header ul li a span {
+	display:block;
+	position:absolute;
+	left:0px;
+	top:32px;
+	height:1px;
+	width:100%;
+	border-top:3px solid #ed1165;
+	opacity:0;
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("0" * 100));
+	filter:alpha(opacity = ("0" * 100));
+	-webkit-transition:all 0.5s ease 0s;
+	-moz-transition:all 0.5s ease 0s;
+	-o-transition:all 0.5s ease 0s;
+	-ms-transition:all 0.5s ease 0s;
+	transition:all 0.5s ease 0s;
+}
+
+header ul li a:hover > span {
+	opacity:1;
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("1" * 100));
+	filter:alpha(opacity = ("1" * 100));
+}
+
+header ul li a.active > span {
+	opacity:1;
+	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("1" * 100));
+	filter:alpha(opacity = ("1" * 100));
+}
+/*====================== */
+
+#container {
+    width: 80%;
+    margin: 89px auto 0 auto;
+    text-align: center;
+}
+h3 {
+    margin: .75em auto .75em auto;
+    padding-top: 1em;
+    color: #379AA0;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+button {
+    width: 8em;
+    height: 6em;
+    background-color: #F4A4AE;
+    border-radius: 10px;
+    padding: 1em;
+    font-size: .65em;
+}
+#reset {
+    position: absolute;
+    top: 120px;
+    right: 140px;
+}
+#imgContainer {
+    margin: 0 auto;
+    height: 240px;
+    background-color: #eee;
+}
+img {
+    margin: 0 auto;
+}
+.dropIn {
+                /* name, duration, timing function (ease), animation delay, repeat (1=once), fill-mode */
+    -webkit-animation: drop-in .5s ease-out .75s 1 both;
+}
+#numberSelection {
+    width: 100%;
+    height: 4em;
+    margin: .5em auto;
+}
+.number {
+    height: 1em;
+    padding: 1em;
+    color: #FFF4BD;
+    border-radius: 10px;
+    background-color: #FF3E98;
+    text-align: center;
+    margin: .75em .5em;
+    display: inline-block;
+    -webkit-animation: moveUp .2s ease-in 1 normal forwards;
+}
+.number:nth-child(2) {
+    opacity: 0;
+    -webkit-animation-delay: .05s;
+}
+.number:nth-child(3) {
+    opacity: 0;
+    -webkit-animation-delay: .1s;
+}
+.number:nth-child(4) {
+    opacity: 0;
+    -webkit-animation-delay: .15s;
+}
+.number:nth-child(5) {
+    opacity: 0;
+    -webkit-animation-delay: .2s;
+}
+.number:nth-child(6) {
+    opacity: 0;
+    -webkit-animation-delay: .25s;
+}
+.number:nth-child(7) {
+    opacity: 0;
+    -webkit-animation-delay: .3s;
+}
+.number:nth-child(8) {
+    opacity: 0;
+    -webkit-animation-delay: .35s;
+}
+.number:nth-child(9) {
+    opacity: 0;
+    -webkit-animation-delay: .4s;
+}
+.number:nth-child(10) {
+    opacity: 0;
+    -webkit-animation-delay: .45s;
+}
+
+div.number:hover {
+    background-color: #FA73B2;
+    cursor: pointer;
+}
+
+@-webkit-keyframes drop-in {
+	from {
+		opacity:0;
+		-webkit-transform:translateY(-30px);}
+	to{
+		opacity: 1;
+		-webkit-transform:translateX(0px);
+	}
+} 
+
+@-webkit-keyframes moveUp {
+	from {
+		-webkit-transform:translateY(30px);
+		opacity:0;
+	}
+	
+	to {-webkit-transform:translateY(0px);
+	      opacity:1;
+	}
+}
+
+#resultBox {
+    width: 100%;
+    height: 170px;
+    padding-bottom: 2em;
+    margin: -8px 0 0 0;
+    background-color: #3BA4A6;
+    text-align: center;
+}
+#results {
+    color: #FFF4BD;
+    font-size: 1.65em;
+    font-family: inherit;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+    padding-top: .5em;
+}
+
+
+
+
