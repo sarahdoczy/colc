@@ -67,25 +67,7 @@ var setImage = function(image) {
     document.getElementById("image").src = image;
 }
 
-/*var createButtons = function() {
-    var button;
-    var addText;
-    var id;
-    var numberSelection;
-    
-    for (var i=0;i<arrayOfImages.length/2;i++) {  //divide by 2 because currently there are 2 images of each *number*
-        button=document.createElement("button"); //creates new button
-        addText = document.createTextNode(i+1); //adds text to the button
-        button.type="button";
-        button.className='number'; //add class to button
-        id = button.id = i+1;
-        button.addEventListener('click', onButtonClick, false);
-        button.appendChild(addText); //appends text to the new button
-        numberSelection = document.getElementById("numberSelection"); // gets the parent div
-        numberSelection.appendChild(button); // adds new button to the parent div"numberSelection"
-    }
-} */
-var createButtons2 = function() {
+var createButtons = function() {
     var div;
     var addText;
     var id;
@@ -109,22 +91,36 @@ var onButtonClick = function(event) {
     var imageValue = getImageValue(randomNumber);
     var description =  getImageDescription(randomNumber);
     var results = document.getElementById("results");
-
+  
+    resultsDropDown();
     if (numID === imageValue && imageValue == 1) {
-        results.innerHTML = "HURRAY! That's right! <br> There is "+ imageValue + " " + description+"!";
+        results.innerHTML = "<h2>HURRAY!</h2> <p>That's right, there is "+ imageValue + " " + description+"!</p>";
     }else if (numID === imageValue) {
-        results.innerHTML = "HURRAY! That's right! <br> There are "+ imageValue + " " + description+"!";
+        results.innerHTML = "<h2>HURRAY!</h2><p>That's right, there are "+ imageValue + " " + description+"!</p>";
     }else {
-        results.innerHTML = "Sorry! &nbsp Try Again!";
+        results.innerHTML = "<h1>Try Again!</h1>";
+        removeRefreshButton();
     }
     removeDropInClass(); 
+}
+
+var resultsDropDown = function(){
+    var numID = parseInt(event.target.id);
+    var imageValue = getImageValue(randomNumber);
+    if (numID === imageValue) {
+        $("#resultBox").slideDown(400);
+        keepScore();
+        addRefreshButton();
+    }else {
+        $("#resultBox").slideDown(400).delay(1300).slideUp(400);
+    }
 }
 
 var setResultHTML = function(text){
     document.getElementById("results").innerHTML = text;
 }
 
-//need to add a funtion to the "refresh" button so the image 'drops-in' every time.
+// add a funtion to the "refresh" button so the image 'drops-in' every time.
 var addDropInClass = function(){
     document.getElementById("image").className = "dropIn";
     
@@ -133,22 +129,39 @@ var removeDropInClass = function() {
     document.getElementById("image").className = "";
 }
 
-
+var addRefreshButton = function() {
+    $('#reset').delay(300).fadeIn(900);
+}
+var removeRefreshButton = function(){
+    $('#reset').hide();
+}
 var refresh = function(){
     randomNumber = getRandomNumber();
     setImage(getImage(randomNumber)); //getRandomImage is called to set the image in the HTML. 
     setResultHTML("");
+    removeRefreshButton();
 }
 
 var onResetButtonClick = function(){
     addDropInClass();
+    $("#resultBox").slideUp(500);
     refresh();
 }
 
-refresh();
-//createButtons(); //creates the appropriate number of buttons based on the number of images in the array.
-createButtons2();
+//TODO
+var score = 0;
+var keepScore = function(){
+    var numID = parseInt(event.target.id);
+    var imageValue = getImageValue(randomNumber);
 
+    if (numID === imageValue) {
+        score++; 
+        document.getElementById("score").innerHTML = "Score: "+score;  
+    }
+}
+
+refresh();
+createButtons();
 
 
 

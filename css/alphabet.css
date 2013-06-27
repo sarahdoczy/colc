@@ -1,0 +1,247 @@
+body {
+    font-family: sans-serif;
+    font-family: 'Noto Serif', serif;
+    
+}
+#container {
+    margin: 89px auto 0 auto;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    position: relative;
+}
+#imageContainer {
+    background-color: #fff;
+    width: 100%;
+    height: 275px;
+    margin: 90px auto 0 auto;
+    padding-top: 30px;
+    position: relative;
+    text-align: center;
+    color: #080;
+}
+
+/* ================ dynamic Content =========== */
+.selectedLetter{
+    float: left;
+    width: 150px;
+    height: 110px;
+    padding: .2em;
+    letter-spacing: 5px;
+    position: absolute;
+    /*top: 0;
+    left: 60px;*/
+    top: 10px;
+    left: 20px;
+    background-color: #eee;
+    font-size: 2.2em;
+}
+.alphabetContent {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 2em;
+}
+.letterImage, .sentence {
+    display: inline;
+    vertical-align: middle; 
+}
+.letterImage {
+    margin-right: .6em;
+    height: 225px;
+    
+}
+
+.firstletter {
+    color: #f00;
+    /*font-size: 1.5em; */
+}
+h1.sentence {
+    font-weight: normal;
+}
+
+/* === alphabet container ==== */
+
+#alphabetContainer {
+    background-color: #9ee;
+    width: 100%;
+    margin: 0 auto .5em auto;
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#alphabetContainer div.row {
+    display: block;
+    margin-bottom: 2em;
+}
+#alphabetContainer div.row ul{
+    width: 100%;
+    margin: 0 1% 0 1%;
+    display: table;
+}
+#alphabetContainer div.row ul li.letter {
+    list-style: none;
+    text-transform: uppercase;
+    float: left;
+    margin: 1% 1% 0 0;
+    width: 6%;
+    background-color: #fef;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1%;
+}
+#alphabetContainer div.row ul li.letter a {
+    text-decoration: none;
+    color: #777;
+    font-size: 2.5em;
+    
+}
+
+/* =====  Media Queries   ======  */
+
+/*desktop styles*/
+@media only screen and (min-width:960px) {
+    #mobileAlphabet {
+        display: none;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:959px) {
+    #mobileAlphabet {
+        display: none;
+    }
+    
+    #alphabetContainer div.row ul{
+        width: 100%;
+        margin: 0 0 0 -1%;
+        display: table;
+    }
+    #alphabetContainer div.row ul li.letter {
+        float: left;
+        margin: 1% 1% 0 0;
+        width: 6%;
+    }
+    #alphabetContainer div.row ul li.letter a {
+        font-size: 1.75em;        
+    }
+}
+
+
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:768px) {
+    #mobileAlphabet {
+        display: none;
+    }
+    #alphabetContainer div.row ul{
+        width: 100%;
+        margin: 0 0 0 -2%;
+        display: table;
+    }
+    #alphabetContainer div.row ul li.letter {
+        float: left;
+        margin: 1% 1% 0 0;
+        width: 6%;   
+    }
+    #alphabetContainer div.row ul li.letter a {
+        font-size: 1.5em;
+        
+    }
+    .alphabetContent {
+        width: 90%;
+    }
+    .letterImage {
+        height: 200px;
+        margin-right: .5em;
+    } 
+    #dynamicContent {
+        font-size: 1em;
+    }
+    #dynamicContent h1 {
+        font-size: 2em;
+        margin-top: 1.75em;
+    }
+    .firstletter {
+        color: #f00;
+        font-size: 1em;
+    }
+    
+}
+
+/*mobile styles*/
+@media only screen and (max-width:480px) {
+    #alphabetContainer {
+        display: none;
+    }
+    .alphabetContent {
+        width: 90%;
+    }
+    #mobileAlphabet {
+        position: relative;
+        width: 70%;
+        margin: 30px auto;
+        text-align: center;
+    }
+    #mobileAlphabet label {
+        margin-right: 10px;
+        font-size: 1.3em;
+        vertical-align: middle;
+    }
+    #mobileAlphabet select {
+        width: auto;
+        margin: .5em auto;
+    }
+    
+   /* .letterImage, .sentence {
+        display: block;
+        text-align: center;
+    }
+    .letterImage {
+        height: 200px;
+        margin: 0 auto -1.5em auto;
+    }*/
+    #dynamicContent {
+        font-size: .9em;
+    }
+   
+    .firstletter {
+        color: #f00;
+        font-size: 1em;
+    }
+    .selectedLetter {
+        float: none;
+        width: 85px;
+        height: 53px;
+        padding: .1em;
+        letter-spacing: 5px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+    .alphabetContent {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+    .letterImage, .sentence {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .letterImage {
+        margin: 30px auto 2px auto;
+        height: 150px;
+        
+    }
+    h1.sentence {
+        margin-top: 0em;
+    }
+
+}
+
+
+
+
