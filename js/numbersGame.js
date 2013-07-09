@@ -63,7 +63,6 @@ var getImageDescription = function(index){
 }
 
 var setImage = function(image) {
-    //alert(image);
     document.getElementById("image").src = image;
 }
 
@@ -120,7 +119,6 @@ var setResultHTML = function(text){
     document.getElementById("results").innerHTML = text;
 }
 
-// add a funtion to the "refresh" button so the image 'drops-in' every time.
 var addDropInClass = function(){
     document.getElementById("image").className = "dropIn";
     
@@ -148,7 +146,6 @@ var onResetButtonClick = function(){
     refresh();
 }
 
-//TODO
 var score = 0;
 var keepScore = function(){
     var numID = parseInt(event.target.id);

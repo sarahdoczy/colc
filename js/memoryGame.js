@@ -20,48 +20,48 @@ B. should there be a hint button?
 C. after so many incorrect tries, the js could help find a match.
 D. time the game? => timer would start running as soon as the "Play Again" button is clicked.
 */
-/*
- *red circle
-    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMnNomhV2XYrMq_PYSMbxo2WOUAWyKbiGSlzvc4s5avuG1w9C1
- green circle
-    https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2iBp-aOe8wDmVCYTBCgkSLl40dZVr1NtLLjlC4a0f806NChCamw
- blue square
-    https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIU0x93US8zY9tUugl-1AhHSCF6YwaeWYYDx4fIPPJpIv28VCo
- purple square
-    https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcKu6NIVz69tc2KFR-v1tBu2j5O3ac07ZM8wyofMH6vAlFguuB
- red triangle
-    https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnvFypvwuuIUu8wI5kaDyiolld-6edHZaboZGa4uUaqyAyAlcLXw
- orange triangle
-    https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTGIXjM4gkUh1KKMdoVkNvKrEVuvPskUFql5eugw42p9WqM-FRe
- yellow diamond
-    https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQixsrnWOggm0pxC_JO_s8UflSacImaCrYqWejRDRw6TsUDbDv1Qg
- purple diamond
-    https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPonbYrjBMITVwEoYk5BkR5rGyYMb7UkkAOGQpqVMbWReqOVezzA
- orange star
-    https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQkNTXcJX-o5WOJEQvdANlIZFGuT1_pgld3EzCY08gzmD-VvGVybg
- pink star
-    https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1EV8IvV5N0pnVdixExBe_2g9959dffZEhP28Se5k5VdVMS-18Tw
- 
- */
+
+
+
+$(document).ready(function(){
+
+        $('.hover').click(function(){
+                $(this).addClass('flip');
+        },function(){
+                $(this).removeClass('flip');
+        });
+});
+
 
 var arrayOfImages = new Array();
 
-arrayOfImages.push({image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMnNomhV2XYrMq_PYSMbxo2WOUAWyKbiGSlzvc4s5avuG1w9C1',value: 'redCircle'},
-                  {image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2iBp-aOe8wDmVCYTBCgkSLl40dZVr1NtLLjlC4a0f806NChCamw',value: 'greenCircle'},
-                  {image:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTIU0x93US8zY9tUugl-1AhHSCF6YwaeWYYDx4fIPPJpIv28VCo',value: 'blueSquare'},
-                  {image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQcKu6NIVz69tc2KFR-v1tBu2j5O3ac07ZM8wyofMH6vAlFguuB',value: 'purpleSquare'},
-                  {image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnvFypvwuuIUu8wI5kaDyiolld-6edHZaboZGa4uUaqyAyAlcLXw',value: 'redTriangle'},
-                  {image:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTGIXjM4gkUh1KKMdoVkNvKrEVuvPskUFql5eugw42p9WqM-FRe',value: 'orangeTriangle'},
-                  {image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQixsrnWOggm0pxC_JO_s8UflSacImaCrYqWejRDRw6TsUDbDv1Qg',value: 'yellowDiamond'},
-                  {image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSPonbYrjBMITVwEoYk5BkR5rGyYMb7UkkAOGQpqVMbWReqOVezzA',value: 'purpleDiamond'},
-                  {image:'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQkNTXcJX-o5WOJEQvdANlIZFGuT1_pgld3EzCY08gzmD-VvGVybg',value: 'orangeStar'},
-                  {image:'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT1EV8IvV5N0pnVdixExBe_2g9959dffZEhP28Se5k5VdVMS-18Tw',value: 'pinkStar'}
+arrayOfImages.push({image:'images/memoryGameImages/black_rectangle.png',value: 'black rectangle'},
+                  {image:'images/memoryGameImages/blue_circle.png',value: 'blue circle'},
+                  {image:'images/memoryGameImages/blue_trapezoid.png',value: 'blue trapezoid'},
+                  {image:'images/memoryGameImages/blue_triangle.png',value: 'blue triangle'},
+                  {image:'images/memoryGameImages/brown_square.png',value: 'brown square'},
+                  {image:'images/memoryGameImages/gold_triangle.png',value: 'gold triangle'},
+                  {image:'images/memoryGameImages/green_diamond.png',value: 'green diamond'},
+                  {image:'images/memoryGameImages/green_pentagon.png',value: 'green pentagon'},
+                  {image:'images/memoryGameImages/green_rectangle.png',value: 'green rectangle'},
+                  {image:'images/memoryGameImages/grey_octagon.png',value: 'grey octagon'},
+                  {image:'images/memoryGameImages/orange_hexagon.png',value: 'orange hexagon'},
+                  {image:'images/memoryGameImages/orange_oval.png',value: 'orange oval'},
+                  {image:'images/memoryGameImages/pink_diamond.png',value: 'pink diamond'},
+                  {image:'images/memoryGameImages/pink_pentagon.png',value: 'pink pentagon'},
+                  {image:'images/memoryGameImages/pink_star.png',value: 'pink star'},
+                  {image:'images/memoryGameImages/purple_oval.png',value: 'purple oval'},
+                  {image:'images/memoryGameImages/purple_trapezoid.png',value: 'purple trapezoid'},
+                  {image:'images/memoryGameImages/red_circle.png',value: 'red circle'},
+                  {image:'images/memoryGameImages/red_octagon.png',value: 'red octagon'},
+                  {image:'images/memoryGameImages/white_hexagon.png',value: 'white hexagon'},
+                  {image:'images/memoryGameImages/yellow_square.png',value: 'yellow square'},
+                  {image:'images/memoryGameImages/yellow_star.png',value: 'yellow star'}
                   );
 
 var getRandomNumber = function() {
     return Math.floor(Math.random()*arrayOfImages.length)
 }
-
 
 var getImage = function(index){
     return arrayOfImages[index].image; // getRandomNumber is called here to grab a random image from the array. It's returning an image to this var.
@@ -79,12 +79,9 @@ var setImage = function(image) {
     document.getElementById("image").alt = imageValue;
 }
 
-
-
 var refresh = function(){
     randomNumber = getRandomNumber();
     setImage(getImage(randomNumber)); //getRandomImage is called to set the image in the HTML.
-
 }
 
 refresh();

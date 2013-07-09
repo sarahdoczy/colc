@@ -5,15 +5,15 @@ body {
 
 
 #container {
-    width: 800px;
+    width: 870px;
     margin: 120px auto 0 auto;
 }
 .panel {
         float: left;
-        width: 175px;
-        height: 175px;
-        margin-left: 20px;
-        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+        margin-left: 15px;
+        margin-bottom: 15px;
         position: relative;
         font-size: .8em;
         
@@ -75,6 +75,7 @@ body {
         height: inherit;
         border: 1px solid #ccc;
         background: #f92;
+	text-align: center;
         text-shadow: 1px  1px 1px rgba(0,0,0,0.6); 
         
         -webkit-transform: rotateY(-180deg);
@@ -99,12 +100,13 @@ body {
         -webkit-transform: rotateX(0deg) rotateY(0deg);
         -moz-transform: rotateX(0deg) rotateY(0deg);
 
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 8px rgba(0,0,0,0.2);
         -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 #image {
     z-index: 110000000;
+    margin-top: 12px;
 }
 
 
