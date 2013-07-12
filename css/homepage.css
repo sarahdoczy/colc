@@ -1,0 +1,60 @@
+#container {
+    width: 80%;
+    margin: 89px auto 0 auto;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+#container h1 {
+    padding-top: 2em;
+}
+#container h4 {
+    padding-top: 1em;
+}
+
+/* = ===== */
+#bottomContainer {
+	width: 95%;
+	margin: 5em auto 0 auto;
+	padding: 1em 0 9em 0;
+	position:relative; 
+}
+
+#bottomContainer .box_container { width: 25%; float: left; background-position: center; }
+
+#bottomContainer .box_container .content {
+    padding: 2em;
+    margin-top: 1.5em;
+    text-align: center;
+    border-radius: 50%;
+    /* to keep circle ratio */
+    width: 65%;
+    height: 2em;
+    padding-bottom: 65%;
+    position: relative;
+    color: white;
+}
+
+.caption {
+	font-size:2.2em;
+	position:relative;
+	display: none;
+	text-align: center;
+	color: #6B5D70;
+	text-shadow: 1px 1px 1px #FFFBEF;
+	bottom: 4em;
+	right: 0.4em
+	
+}
+a {
+	text-decoration: none;
+}
+
+#bottomContainer .box_container { display: none; padding: .2em 0 1em 0; }
+
+#bottomContainer .box_container #alphabet { background: url('../images/letters10001.jpg') no-repeat -68px; }
+#bottomContainer .box_container #numbers { background: url('../images/numbers10002.jpg') no-repeat -66px -1px; } 
+#bottomContainer .box_container #colors { background: url('../images/crayons10001.jpg') no-repeat -62px -7px; }
+#bottomContainer .box_container #animals { background: url('../images/monkey1.jpg') no-repeat -152px -59px; }
+
+.clear-fix { clear: both; line-height: 1px; }

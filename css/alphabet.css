@@ -1,68 +1,66 @@
 body {
-    font-family: sans-serif;
     font-family: 'Noto Serif', serif;
-    
 }
 #container {
+    width: 100%;
     margin: 89px auto 0 auto;
     font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
     text-align: center;
     position: relative;
 }
 #imageContainer {
     background-color: #fff;
-    width: 100%;
-    height: 275px;
-    margin: 90px auto 0 auto;
-    padding-top: 30px;
+    width: 90%;
+    height: 255px;
+    margin: 0 auto;
+    padding-top: 20px;
     position: relative;
     text-align: center;
-    color: #080;
+    color: #1C7FA6;
 }
 
 /* ================ dynamic Content =========== */
-.selectedLetter{
-    float: left;
-    width: 150px;
-    height: 110px;
-    padding: .2em;
-    letter-spacing: 5px;
-    position: absolute;
-    /*top: 0;
-    left: 60px;*/
-    top: 10px;
-    left: 20px;
-    background-color: #eee;
-    font-size: 2.2em;
-}
 .alphabetContent {
-    width: 80%;
+    width: 95%;
     margin: 0 auto;
     font-size: 2em;
 }
-.letterImage, .sentence {
-    display: inline;
-    vertical-align: middle; 
+.selectedLetter{
+    width: 140px;
+    height: 100px;
+    padding: .2em;
+    letter-spacing: 5px;
+    background-color: #FFFFCF;
+    font-size: 1.9em;
+    color: #D92534;
+    border: 3px solid #D92534;
 }
 .letterImage {
     margin-right: .6em;
-    height: 225px;
-    
+    margin-bottom: 2.5em;
+    height: 225px;   
+} 
+.letterImage, .displayedLetter {
+    display: inline-block;
 }
 
+.selectedLetter, .sentence {
+    display: block;
+    margin: 0 auto;
+}
 .firstletter {
-    color: #f00;
-    /*font-size: 1.5em; */
+    color: #D92534;
 }
 h1.sentence {
     font-weight: normal;
 }
+.dynamicContent h1 {
+    margin-top: .5em;    
+}
 
 /* === alphabet container ==== */
-
 #alphabetContainer {
-    background-color: #9ee;
+    background-color: #fff;
     width: 100%;
     margin: 0 auto .5em auto;
     position: relative;
@@ -84,11 +82,10 @@ h1.sentence {
     float: left;
     margin: 1% 1% 0 0;
     width: 6%;
-    background-color: #fef;
+    background-color: #1C7FA6;
     cursor: pointer;
     text-align: center;
     border-radius: 50px;
-    
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -96,9 +93,8 @@ h1.sentence {
 }
 #alphabetContainer div.row ul li.letter a {
     text-decoration: none;
-    color: #777;
-    font-size: 2.5em;
-    
+    color: #FFEE8F;
+    font-size: 2.3em;
 }
 
 /* =====  Media Queries   ======  */
@@ -113,7 +109,10 @@ h1.sentence {
     #mobileAlphabet {
         display: none;
     }
-    
+    #alphabetContainer {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
     #alphabetContainer div.row ul{
         width: 100%;
         margin: 0 0 0 -1%;
@@ -129,8 +128,6 @@ h1.sentence {
     }
 }
 
-
-
 /*tablet styles*/
 @media only screen and (min-width:481px) and (max-width:768px) {
     #mobileAlphabet {
@@ -144,31 +141,19 @@ h1.sentence {
     #alphabetContainer div.row ul li.letter {
         float: left;
         margin: 1% 1% 0 0;
-        width: 6%;   
+        width: 6%;
+        padding: 0;
     }
     #alphabetContainer div.row ul li.letter a {
-        font-size: 1.5em;
-        
+        font-size: 1.2em;
     }
     .alphabetContent {
-        width: 90%;
+        width: 95%;
     }
     .letterImage {
         height: 200px;
         margin-right: .5em;
-    } 
-    #dynamicContent {
-        font-size: 1em;
     }
-    #dynamicContent h1 {
-        font-size: 2em;
-        margin-top: 1.75em;
-    }
-    .firstletter {
-        color: #f00;
-        font-size: 1em;
-    }
-    
 }
 
 /*mobile styles*/
@@ -177,12 +162,14 @@ h1.sentence {
         display: none;
     }
     .alphabetContent {
-        width: 90%;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.5em;
     }
     #mobileAlphabet {
         position: relative;
         width: 70%;
-        margin: 30px auto;
+        margin: 90px auto 40px auto;
         text-align: center;
     }
     #mobileAlphabet label {
@@ -194,47 +181,29 @@ h1.sentence {
         width: auto;
         margin: .5em auto;
     }
-    
-   /* .letterImage, .sentence {
-        display: block;
-        text-align: center;
-    }
-    .letterImage {
-        height: 200px;
-        margin: 0 auto -1.5em auto;
-    }*/
-    #dynamicContent {
+
+    .dynamicContent {
         font-size: .9em;
     }
-   
-    .firstletter {
-        color: #f00;
-        font-size: 1em;
-    }
+
     .selectedLetter {
-        float: none;
         width: 85px;
         height: 53px;
         padding: .1em;
         letter-spacing: 5px;
         text-align: center;
-        margin: 0 auto;
+        margin: 10px auto 0 auto;
         font-size: 1.5em;
     }
-    .alphabetContent {
-        width: 80%;
-        margin: 0 auto;
-        font-size: 1.5em;
-    }
+
     .letterImage, .sentence {
         display: block;
         vertical-align: middle;
         text-align: center;
     }
     .letterImage {
-        margin: 30px auto 2px auto;
+        margin: 20px auto 2px auto;
         height: 150px;
-        
     }
     h1.sentence {
         margin-top: 0em;

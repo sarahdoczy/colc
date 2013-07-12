@@ -63,7 +63,7 @@ div#results p {
 #container h3 {
     margin: .5em auto .75em auto;
     padding-top: 1em;
-    color: #957088;
+    color: #104A61;
     font-size: 1.5em;
     letter-spacing: 1px;
 }
@@ -102,9 +102,9 @@ img {
     height: .75em;
     width: .75em;
     padding: 1em 1.1em 1.4em 1em;
-    color: #FFF7BF;
+    color: #FFEE8F;
     border-radius: 5px;
-    background-color: #FF7AA8;/*#FF3E98;*/
+    background-color: #1C7FA6;
     text-align: center;
     margin: .75em .5em 0 0;
     display: inline-block;

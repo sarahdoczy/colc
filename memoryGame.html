@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
-		<title>COLC | Memory Game with Colors</title>
+		<title>COLC | Colors</title>
                 <link rel="stylesheet" type="text/css" href="css/global.css" />
 		<link rel="stylesheet" type="text/css" href="css/memoryGame.css" />
 		
@@ -34,69 +34,21 @@
                 </nav>
             </header>
             
-		<div id="container">
-			
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img id="image" /></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                     <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                     <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                     <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel --><div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                    <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-                     <div class="hover panel">
-                        <div class="front"></div><!-- /front -->
-                        <div class="back"><img src="" alt=""></div>  <!-- /back -->
-                    </div> <!-- /hover panel -->
-                    
-		</div> <!-- /container -->
+            
+		
+            <div id="container">
+                <h1>Match each COLOR and SHAPE to win the game!</h1>
                 
-                <script type="text/javascript" src="js/memoryGame.js"></script>
+                <div id="numberOfTries">Number of Attempts: </div>
+                
+                <button id="playAgain" onclick="onResetButtonClick()">Play Again!</button>
+                
+                <div id="gameContainer"></div>
+                    
+            </div> <!-- /container -->
+            
+            
+            <script type="text/javascript" src="js/memoryGame.js"></script>
                 
 	</body>
 </html>
