@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     $('select#alphabet').change(function () {
           var letter = $('#alphabet option:selected').val();
-          $('.dynamicContent').load('alphabetLetters/'+letter+'.html');
+          $('.dynamicContent').fadeOut(0).load('alphabetLetters/'+letter+'.html').fadeIn(800);
         
     }); 
 

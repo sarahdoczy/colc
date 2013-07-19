@@ -1,21 +1,3 @@
-/*On page load, an image appears with a certain number of items (1-10).
-have 3 pics of each number (3 x 10 = 30).
-A randon picture appears on page load.
-
-User is asked to select "How many items are in the picture".
-If user selects correct number, a message appears "Congratulations. That's right! There are 10 dogs".
-User then clicks button to get a new image.
-
-If user selects incorrect number, a message appears "Sorry, try again". */
-
-
-// 2 pictures of each 'number' of objects
-
-// CONSTANTS
-//var _RESULTS = "results";
-//
-
-
 // GLOBAL VARIABLES
 var randomNumber = 0;
 var arrayOfImages = new Array();
@@ -107,11 +89,12 @@ var resultsDropDown = function(){
     var numID = parseInt(event.target.id);
     var imageValue = getImageValue(randomNumber);
     if (numID === imageValue) {
-        $("#resultBox").slideDown(400);
+            $("#resultBox").animate({"top": "0px",}, 800);
+        
         keepScore();
         addRefreshButton();
     }else {
-        $("#resultBox").slideDown(400).delay(1300).slideUp(400);
+        $("#resultBox").animate({"top": "0px"}, 800).delay(1300).animate({"top": "-302px"}, 600);
     }
 }
 
@@ -128,7 +111,7 @@ var removeDropInClass = function() {
 }
 
 var addRefreshButton = function() {
-    $('#reset').delay(300).fadeIn(900);
+    $('#reset').delay(300).animate({"top": "270px"}).fadeIn(900);
 }
 var removeRefreshButton = function(){
     $('#reset').hide();
@@ -142,7 +125,7 @@ var refresh = function(){
 
 var onResetButtonClick = function(){
     addDropInClass();
-    $("#resultBox").slideUp(500);
+    $("#resultBox").animate({"top": "-302px"}, 600);
     refresh();
 }
 

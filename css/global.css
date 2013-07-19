@@ -48,7 +48,7 @@ header ul li a.active, header ul li a:hover {
     border: 1px solid #ede;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
-    background-color: rgba(249, 249, 249,.5); /*#CEE4ED;*/
+    background-color: rgba(245, 245, 245,.5); 
     margin: -1px;
 }
 header ul li a {
@@ -80,7 +80,7 @@ aside {
     position: absolute;
     top: 89px;
     left: 0px;
-    width: 215px;
+    width: 15%;
     height: 100%;
     margin: auto;
     background: rgba(254,254,254,1);

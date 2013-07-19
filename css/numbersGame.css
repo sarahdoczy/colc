@@ -1,12 +1,13 @@
-
 #container {
-    width: 80%;
-    margin: 89px auto 0 auto;
+    width: 75%;
+    right: 5%;
+    margin: 9px auto 0 auto;
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
-    position: relative;
+    position: absolute;
 }
+/* 
 #resultBox {
     width: 100%;
     height: 220px;
@@ -15,8 +16,19 @@
     opacity: .9;
     text-align: center;
     z-index: 3;
-    display: none;
+   display: none; 
     position: absolute;
+}*/
+#resultBox {
+    width: 100%;
+    height: 220px;
+    padding-bottom: 2em;
+    margin: -1.2em auto .5em auto;
+    opacity: .9;
+    text-align: center;
+    z-index: 3; 
+    position: absolute;
+    top: -302px;
 }
 #results {
     color: #355561;
@@ -37,9 +49,11 @@ div#results p {
 }
 
 #resultsBorder {
-    position: relative;
-    width: 35em;
-    height: 209px;
+    position: absolute;
+    width: 65%;
+    height: 84%;
+    top: 106px;
+    right: 15%;
     background-color: #fdfdfd;
     border: 1px solid #cccccc;
     box-shadow: 0px 0px 21px -1px #ddd;
@@ -67,16 +81,20 @@ button {
     display: none;
     z-index: 4;
 }
+
 #reset {
-   position: absolute;
-   margin: 195px 0 0 -27px;
+    position: absolute;
+    top: -300px;
+    right: 47%;
 }
 #imgContainer {
     margin: 7em auto 0 auto;
-    height: 240px;
+    /*height: 240px;*/
+    width: 70%;
     position: relative;
 }
 img {
+    height: 240px;
     margin: 0 auto;
     position: relative;
 }
@@ -90,14 +108,14 @@ img {
     margin: .5em auto;
 }
 .number {
-    height: .75em;
-    width: .75em;
-    padding: 1em 1.1em 1.4em 1em;
+    height: 28%;
+    width: 2%;
+    padding: 2%;
     color: #FFEE8F;
     border-radius: 5px;
     background-color: #AD1E2A;
     text-align: center;
-    margin: .75em .5em 0 0;
+    margin: 0% 1% 0 1%;
     display: inline-block;
     -webkit-animation: moveUp .2s ease-in 1 normal forwards;
 }
@@ -141,8 +159,6 @@ img {
 
 div.number:hover {
     opacity: .9;
-/*    background-color: #2D8FB7;
-    color:#104A61; */
     cursor: pointer;
 }
 
@@ -166,18 +182,138 @@ div.number:hover {
 	}
 }
 
-/*#score {
-    position: absolute;
-    top: 8em;
-    left: 1em;
-    width: 6em;
-    font-size: 1.5em;
-    text-align: center;
-    color: #FF3E98;
-    border-radius: 10px;
-    background-color: #FFF4BD;
-    z-index: 42;
-}*/
 
+
+
+/* =====  Media Queries   ======  */
+
+@media only screen and (min-width:769px) and (max-width:959px) {
+    img {
+	height: 220px;
+    }
+    #container h3 {
+	font-size: 1.2em;
+    }
+    .number {
+	width: 3.5%;
+	padding: 2% 2.5% 3% 2%;
+	margin: 0 1%;
+    }
+}
+
+@media only screen and (min-width:596px) and (max-width:768px) {
+    img {
+	height: 180px;
+    }
+    #container h3 {
+	font-size: 1.1em;
+    }
+    .number {
+	width: 3.5%;
+	padding: 2% 2.5% 3% 2%;
+	margin: 0 1%;
+    }
+    #resultsBorder {
+	width: 83%;
+	height: 78%;
+	left: 1.5%;
+    }
+    
+    div#results {
+	margin-top: -1em;
+    }
+    div#results h1 {
+	padding-top: 1em;
+	font-size: 2em;
+    }
+    div#results h2 {
+	font-size: 1.7em;
+    }
+    div#results p {
+	font-size: 1.2em;
+    }
+    #reset {
+	position: absolute;
+	/*top: 275px;*/
+	right: 45%;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:595px) {
+    img {
+	height: 160px;
+    }
+    #container h3 {
+	font-size: .9em;
+    }
+    .number {
+	width: 6%;
+	padding: 3% 3.5% 4% 3%;
+	margin: .5% 3% 1.5% 2%;
+    }
+    #resultsBorder {
+	width: 83%;
+	height: 78%;
+	right: 0%;
+    } 
+    div#results {
+	margin-top: -1em;
+    }
+    div#results h1 {
+	padding-top: 1em;
+	font-size: 2em;
+    }
+    div#results h2 {
+	font-size: 1.7em;
+    }
+    div#results p {
+	font-size: 1.2em;
+    }
+    #reset {
+	position: absolute;
+	/*top: 275px;*/
+	right: 40%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    img {
+	height: 145px;
+    }
+    #container h3 {
+	font-size: .9em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+    }
+    .number {
+	width: 6%;
+	padding: 3% 3.5% 4% 3%;
+	margin: .5% 3% 1.5% 2%;
+    }
+    #resultsBorder {
+	width: 80%;
+	height: 71%;
+	right: 0%;
+    }    
+    div#results {
+	margin-top: -1em;
+    }
+    div#results h1 {
+	padding-top: 1em;
+	font-size: 1.9em;
+    }
+    div#results h2 {
+	font-size: 1.5em;
+    }
+    div#results p {
+	font-size: 1em;
+    }
+    #reset {
+	position: absolute;
+	/*top: 275px;*/
+	right: 40%;
+    }
+    
+}
 
 

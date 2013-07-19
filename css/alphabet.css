@@ -57,9 +57,7 @@ h2.sentence {
 .dynamicContent h1 {
     margin-top: 1.5em;    
 }
-.dynamicContent {
-    display: none;
-}
+
 
 /* === alphabet container ==== */
 #alphabetContainer {
