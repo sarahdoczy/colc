@@ -35,7 +35,6 @@ var numberOfClicks = function() {
        }
 }
 var clearNumberOfAttempts = function() {
-    //document.getElementById("numberOfTries").innerHTML = "Number of Attempts: ";
     count = 0;
     document.getElementById("numberOfTries").innerHTML = "Number of Attempts: ";
 }
@@ -44,15 +43,13 @@ var clearNumberOfAttempts = function() {
 //we need to know when the game has ended (all cards have been flipped up)
 //user should not be able to click a "faceUp" card
 //user should not be able to have more than 2 faceUp cards at a time. (never have more than 2 faceUp cards at a time)
-//number of attempts should be cleared when "play Again" button is clicked.
-//make imgaes and squares smaller.
-
 
 var runGameLogic = function(card) {
     if (previousClickedCard != null) {
         var cardsAreEqual = compareCards(card, previousClickedCard);
         if (cardsAreEqual) {
             //console.log("It's a match");
+            disableFlipMethod(card);
             previousClickedCard = null;
         } else {
             //console.log("Sorry try again");
@@ -81,6 +78,12 @@ var flipCard = function(div) {
     } else {
         $(div).addClass('flip');
     }
+}
+//  ====    todo      ========
+var disableFlipMethod = function(div) {
+    console.log("matching! disable flip");
+    //var divPanel = document.getElementsByClassName('panel');
+    //divPanel.removeEventListener('click', onCardClick, false);
 }
 
 var shuffle = function(array) {

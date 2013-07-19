@@ -153,7 +153,7 @@ var keepScore = function(){
 
     if (numID === imageValue) {
         score++; 
-        document.getElementById("score").innerHTML = "Score: "+score;  
+        document.getElementById("score").innerHTML = score;  
     }
 }
 

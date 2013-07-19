@@ -1,13 +1,4 @@
 
-/*====================== */
-/*  #B365A2 - dark purple
- *  #FF9EEA
- *  #FFB8F0 - light purple
- *  #68B356 - dark green
- *  #B2FF9E - light green
- *  #FAFFC6 - yellow
- *
- */
 #container {
     width: 80%;
     margin: 89px auto 0 auto;
@@ -28,7 +19,7 @@
     position: absolute;
 }
 #results {
-    color: #000;
+    color: #355561;
     font-family: inherit;
     line-height: 1.5em;
     letter-spacing: 2px;
@@ -63,7 +54,7 @@ div#results p {
 #container h3 {
     margin: .5em auto .75em auto;
     padding-top: 1em;
-    color: #104A61;
+    color: #355561;
     font-size: 1.5em;
     letter-spacing: 1px;
 }
@@ -104,7 +95,7 @@ img {
     padding: 1em 1.1em 1.4em 1em;
     color: #FFEE8F;
     border-radius: 5px;
-    background-color: #1C7FA6;
+    background-color: #AD1E2A;
     text-align: center;
     margin: .75em .5em 0 0;
     display: inline-block;
@@ -149,7 +140,9 @@ img {
 }
 
 div.number:hover {
-    background-color: #B7A2C4;
+    opacity: .9;
+/*    background-color: #2D8FB7;
+    color:#104A61; */
     cursor: pointer;
 }
 
@@ -173,7 +166,7 @@ div.number:hover {
 	}
 }
 
-#score {
+/*#score {
     position: absolute;
     top: 8em;
     left: 1em;
@@ -184,7 +177,7 @@ div.number:hover {
     border-radius: 10px;
     background-color: #FFF4BD;
     z-index: 42;
-}
+}*/
 
 
 

@@ -17,7 +17,7 @@ header {
     font-family:"proxima_nova_semibold",  'Helvetica Neue',  Arial,  Helvetica,  sans-serif;
     font-size: 16px;
     background:#fff;
-    background:rgba(255, 255, 255, 0.97);
+    background:rgba(254, 254, 254, 1);
     -webkit-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
     -moz-box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
 	box-shadow:0px 1px 2px rgba(0, 0, 0, 0.2) ;
@@ -35,22 +35,21 @@ header ul {
     float:right;
     height:89px;
 }
-/*header ul li {
-    float:left;
-    margin-left:46px;
-    list-style: none;
-}*/
 
 header ul li {
     float: left;
-    margin-left: 0px;
+    margin: 1px;
     list-style: none;
+    border: 1px solid rgba(254, 254, 254, 1);
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
 }
 header ul li a.active, header ul li a:hover {
     border: 1px solid #ede;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
-    background-color: #CEE4ED;
+    background-color: rgba(249, 249, 249,.5); /*#CEE4ED;*/
+    margin: -1px;
 }
 header ul li a {
     text-decoration:none;
@@ -58,52 +57,47 @@ header ul li a {
     line-height:70px;
     height:89px;
     font-size:1em;
-    color:#104A61;
+    color:#08232E;
     position:relative;
     padding-left: 1.2em;
     padding-right: 1.2em;
 }
-/*header ul li a span {
-    display:block;
-    position:absolute;
-    left:0px;
-    top:32px;
-    height:1px;
-    width:100%;
-    border-top:3px solid #B365A2;
-    opacity:0;
-    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("0" * 100));
-    filter:alpha(opacity = ("0" * 100));
-    -webkit-transition:all 0.5s ease 0s;
-    -moz-transition:all 0.5s ease 0s;
-    -o-transition:all 0.5s ease 0s;
-    -ms-transition:all 0.5s ease 0s;
-    transition:all 0.5s ease 0s;
-}
-header ul li a:hover > span {
-    opacity:1;
-    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("1" * 100));
-    filter:alpha(opacity = ("1" * 100));
-}
-header ul li a.active > span {
-    opacity:1;
-    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=("1" * 100));
-    filter:alpha(opacity = ("1" * 100));
-}
-*/
 
 #menu-icon {
 	display: none;
 	width: 40px;
 	height: 40px;
-	background: #4C8FEC url(../images/menu-icon.png) center;
+	background: #AD1E2A url(../images/menu-icon.png) center;
 	position: absolute;
 	right: 0;
 }
 a:hover#menu-icon {
 	background-color: #444;
-	border-radius: 4px 4px 0 0;
+	/*border-radius: 4px 4px 0 0;*/
 }
+
+aside {
+    position: absolute;
+    top: 89px;
+    left: 0px;
+    width: 215px;
+    height: 100%;
+    margin: auto;
+    background: rgba(254,254,254,1);
+    color: rgb(16,74,97);
+    font-size: 1.3em;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,.2);
+    border-top: none;
+    border-left: none;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+    line-height: 50px;
+}
+aside div {
+    margin-top: 3em;
+}
+
+
 
 /* =====  Media Queries   ======  */
 
@@ -117,8 +111,8 @@ a:hover#menu-icon {
     header ul li a {
 	height:71px;
 	font-size:1em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: .9em;
+	padding-right: .8em;
     } 
 }
 
@@ -136,7 +130,7 @@ a:hover#menu-icon {
 	height:71px;
 	font-size:.9em;
 	padding-left: .8em;
-	padding-right: .8em;
+	padding-right: .65em;
     }
 }
 
@@ -153,8 +147,8 @@ a:hover#menu-icon {
     header ul li a {
 	height:71px;
 	font-size:.8em;
-	padding-left: .8em;
-	padding-right: .4em;
+	padding-left: .65em;
+	padding-right: .25em;
     }
 }
 
@@ -169,37 +163,34 @@ a:hover#menu-icon {
     header ul li {
 	margin-left: 0;
 	font-size: 1.5em;
-	
-    }
-    nav ul, nav:active ul { 
-	display: none;
-	position: absolute;
-	padding: 20px;
-	background: #333;
-	border: 5px solid #444;
-	right: 0px;
-	top: 24px;
-	width: 45%;
-	height: auto;
-	border-radius: 4px 0 4px 4px;
-    }
-    
-    header ul li a.active, header ul li a:hover {
-	border: 0;
+	border: none;
 	border-top-left-radius: 0%;
 	border-top-right-radius: 0%;
-	background-color: #cbcbcb;
-	color: #333;
-    }
-
-    
-    nav li {
+	
 	text-align: center;
 	width: 100%;
 	padding: 10px 0;
 	margin: 0;
 	border-bottom: 1px solid #555;
     }
+    nav ul, nav:active ul { 
+	display: none;
+	position: absolute;
+	padding: 20px;
+	background-color: rgba(0,0,0,.9);
+	right: 0px;
+	top: 24px;
+	width: 45%;
+	height: auto;
+    }
+    header ul li a.active, header ul li a:hover {
+	border: 0;
+	border-top-left-radius: 0%;
+	border-top-right-radius: 0%;
+	background-color: rgba(250,250,250,.8);
+	color: #333;
+    }
+
     nav li:last-child {
 	border-bottom: none;
     }
@@ -212,9 +203,10 @@ a:hover#menu-icon {
 	line-height: 45px;
 	color: #fff;
     }
+    
     header ul li a span {
 	display: none; 
     }
-
+    
 }
 

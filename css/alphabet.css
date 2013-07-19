@@ -16,18 +16,225 @@ body {
     padding-top: 20px;
     position: relative;
     text-align: center;
-    color: #1C7FA6;
+    color: #355561; /*#D92534;*/
 }
 
 /* ================ dynamic Content =========== */
 .alphabetContent {
     width: 95%;
     margin: 0 auto;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .selectedLetter{
-    width: 140px;
-    height: 100px;
+    width: 130px;
+    height: 85px;
+    padding: .2em;
+    letter-spacing: 5px;
+    background-color: #FFFFCF;
+    font-size: 1.9em;
+    color: #AD1E2A;
+    border: 3px solid #AD1E2A;
+}
+.letterImage {
+    margin-right: .6em;
+    height: 225px;   
+} 
+.letterImage, .displayedLetter {
+    display: inline-block;
+}
+
+.selectedLetter, .sentence {
+    display: block;
+    margin: 0 auto;
+}
+.firstletter {
+    color: #AD1E2A;
+}
+h2.sentence {
+    font-weight: normal;
+    font-size: 1.6em;
+}
+.dynamicContent h1 {
+    margin-top: 1.5em;    
+}
+
+/* === alphabet container ==== */
+#alphabetContainer {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto .5em auto;
+    position: relative;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#alphabetContainer div.row {
+    display: block;
+    margin-bottom: .5em;
+}
+#alphabetContainer div.row ul{
+    width: 100%;
+    margin: 0 1% 0 1%;
+    display: table;
+}
+#alphabetContainer div.row ul li.letter {
+    list-style: none;
+    text-transform: uppercase;
+    float: left;
+    margin: 1% 1% 0 0;
+    width: 6%;
+    background-color: #AD1E2A;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50%;
+    padding-bottom: 50%;
+    padding-right: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 1%;
+      
+    
+}
+.container {
+  width: 6%;
+  height:90px;
+  background-color: white;
+  list-style: none;
+  display: inline-block;
+  margin: 0 1% 1% 0;
+}
+.circle {
+  border-radius: 50%;
+  width: 50%;
+  padding: 25%;
+  background-color: #AD1E2A;
+  text-decoration: none;
+  margin-left: 1%;
+  color: #FFEE8F;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  display: block;
+} 
+/*
+#alphabetContainer div.row ul li.letter a {
+    
+    color: #FFEE8F;
+    font-size: 2.3em;
+}
+#alphabetContainer div.row ul li.letter:hover {
+    background-color: #8B0C08;
+}
+#alphabetContainer div.row ul li.letter a:hover {
+    color: #FFEE7C;
+} */
+
+/* =====  Media Queries   ======  */
+
+/*desktop styles*/
+@media only screen and (min-width:960px) {
+    #mobileAlphabet {
+        display: none;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:959px) {
+    #mobileAlphabet {
+        display: none;
+    }
+    #alphabetContainer {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+    
+    /*#alphabetContainer div.row ul{
+        width: 100%;
+        margin: 0 0 0 -1%;
+        display: table;
+    }
+    #alphabetContainer div.row ul li.letter {
+        float: left;
+        margin: 1% 1% 0 0;
+        width: 6%;
+    }
+    #alphabetContainer div.row ul li.letter a {
+        font-size: 1.75em;        
+    } */
+    
+    .container {
+        height:75px;
+      }
+    .circle {
+      font-size: 1.0em;
+    } 
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:768px) {
+    #mobileAlphabet {
+        display: none;
+    }
+  /*  #alphabetContainer div.row ul{
+        width: 100%;
+        margin: 0 0 0 -2%;
+        display: table;
+    }
+    #alphabetContainer div.row ul li.letter {
+        float: left;
+        margin: 1% 1% 0 0;
+        width: 6%;
+        padding: 0;
+    }
+    #alphabetContainer div.row ul li.letter a {
+        font-size: 1.2em;
+    } */
+  
+    .container {
+        height:75px;
+      }
+    .circle {
+      font-size: 0.8em;
+    }
+    
+    #imageContainer {
+        height: 175px;
+    }
+    .alphabetContent {
+        width: 95%;
+    }
+    .letterImage {
+        height: 150px;
+        margin-right: .5em;
+    }
+    .selectedLetter{
+        width: 100px;
+        height: 55px;
+        padding: .2em;
+        letter-spacing: 5px;
+        font-size: 1.2em;
+    }
+    h1.sentence {
+        font-size: 1.2em;
+    }
+}
+
+/*
+ *#imageContainer {
+    background-color: #fff;
+    width: 90%;
+    height: 255px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+    color: #1C7FA6;
+}
+ *.alphabetContent {
+    width: 95%;
+    margin: 0 auto;
+    font-size: 1.5em;
+}
+.selectedLetter{
+    width: 130px;
+    height: 85px;
     padding: .2em;
     letter-spacing: 5px;
     background-color: #FFFFCF;
@@ -37,7 +244,6 @@ body {
 }
 .letterImage {
     margin-right: .6em;
-    margin-bottom: 2.5em;
     height: 225px;   
 } 
 .letterImage, .displayedLetter {
@@ -56,105 +262,7 @@ h1.sentence {
 }
 .dynamicContent h1 {
     margin-top: .5em;    
-}
-
-/* === alphabet container ==== */
-#alphabetContainer {
-    background-color: #fff;
-    width: 100%;
-    margin: 0 auto .5em auto;
-    position: relative;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-#alphabetContainer div.row {
-    display: block;
-    margin-bottom: 2em;
-}
-#alphabetContainer div.row ul{
-    width: 100%;
-    margin: 0 1% 0 1%;
-    display: table;
-}
-#alphabetContainer div.row ul li.letter {
-    list-style: none;
-    text-transform: uppercase;
-    float: left;
-    margin: 1% 1% 0 0;
-    width: 6%;
-    background-color: #1C7FA6;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 50px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 1%;
-}
-#alphabetContainer div.row ul li.letter a {
-    text-decoration: none;
-    color: #FFEE8F;
-    font-size: 2.3em;
-}
-
-/* =====  Media Queries   ======  */
-
-/*desktop styles*/
-@media only screen and (min-width:960px) {
-    #mobileAlphabet {
-        display: none;
-    }
-}
-@media only screen and (min-width:769px) and (max-width:959px) {
-    #mobileAlphabet {
-        display: none;
-    }
-    #alphabetContainer {
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
-    #alphabetContainer div.row ul{
-        width: 100%;
-        margin: 0 0 0 -1%;
-        display: table;
-    }
-    #alphabetContainer div.row ul li.letter {
-        float: left;
-        margin: 1% 1% 0 0;
-        width: 6%;
-    }
-    #alphabetContainer div.row ul li.letter a {
-        font-size: 1.75em;        
-    }
-}
-
-/*tablet styles*/
-@media only screen and (min-width:481px) and (max-width:768px) {
-    #mobileAlphabet {
-        display: none;
-    }
-    #alphabetContainer div.row ul{
-        width: 100%;
-        margin: 0 0 0 -2%;
-        display: table;
-    }
-    #alphabetContainer div.row ul li.letter {
-        float: left;
-        margin: 1% 1% 0 0;
-        width: 6%;
-        padding: 0;
-    }
-    #alphabetContainer div.row ul li.letter a {
-        font-size: 1.2em;
-    }
-    .alphabetContent {
-        width: 95%;
-    }
-    .letterImage {
-        height: 200px;
-        margin-right: .5em;
-    }
-}
+}*/
 
 /*mobile styles*/
 @media only screen and (max-width:480px) {

@@ -12,6 +12,7 @@ $(document).ready(function() {
         
     }); 
 
+    //$('.alphabetContent').fadeIn(800);
 
 
 });

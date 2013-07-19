@@ -7,20 +7,22 @@
 		<link rel="stylesheet" type="text/css" href="css/global.css" />
 		<link rel="stylesheet" type="text/css" href="css/homepage.css" />
 		
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
+
+		
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<link href='http://fonts.googleapis.com/css?family=Cantora+One' rel='stylesheet' type='text/css'>
-
 	</head>
 	
 	<body>
 		
 		<header>
-                <h1>Children's Online<br>Learning Center</h1>
+                <a href="index.html"><h1>Children's Online<br>Learning Center</h1></a>
                 <nav>
                     <a href="#" id="menu-icon"></a>
                     <ul>
@@ -34,24 +36,40 @@
             </header>
 		
 	    <div id="container">
-		<h1>Welcome to the Children's Online Learning Center</h1>
 		
-		<h4>I created this web site as an educational tool for my daughter and to
-		allow me to enhance my HTML, CSS, and Javascript skills.</h4>
+		<div id="overlay">
+		<div>
+		    <h2>Welcome to the Children's Online Learning Center</h2>
+		      
+		      <p>I created this website as an educational tool for my daughter and to
+		      allow me to enhance my frontend web development skills.</p>
+		      <p>It is continually a work in progress.</p>
+		      <p>Please feel free to have a look around and remember to check back later
+		      for future updates.</p>
+				      
+		  <p>
+		    <button class="close"> Close </button>
+		  </p>
+		</div>
+	      </div> <!-- /overlay -->
 		
 		<div id="bottomContainer">
                    
 			<div class="box_container">
-			    <a href="alphabet.html"><div class="content" id="alphabet"></div><div class="caption">alphabet</div></a>
+			    <a href="alphabet.html"><div class="content" id="alphabet"><img src="images/homePageImages/homeAlphabet.png" /></div>
+				<div class="caption">alphabet</div></a>
 			</div>
 			<div class="box_container">
-			     <a href="numbersGame.html"><div class="content" id="numbers"></div><div class="caption">numbers</div></a>
+			     <a href="numbersGame.html"><div class="content" id="numbers"><img src="images/homePageImages/homeNumbers.png" /></div>
+				<div class="caption">numbers</div></a>
 			</div>
 			<div class="box_container">
-				<a href="memoryGame.html"><div class="content" id="colors"></div><div class="caption">colors</div></a>
+				<a href="memoryGame.html"><div class="content" id="colors"><img src="images/homePageImages/homeColors.png" /></div>
+					<div class="caption">colors</div></a>
 			</div>
 			<div class="box_container">
-			    <a href="animalsFlipCard.html"><div class="content" id="animals"></div><div class="caption">animals</div></a>
+			    <a href="animalsFlipCard.html"><div class="content" id="animals"><img src="images/homePageImages/homeAnimals.png" /></div>
+				<div class="caption">animals</div></a>
 			</div>	
  
 		<div class="clear-fix"></div>
