@@ -1,8 +1,5 @@
-
-/*====================== */
-
 #container {
-    width: 960px;
+    width: 70%;
     margin: 120px auto 0 auto;
 }
 
@@ -11,14 +8,14 @@ figure {
     position: relative; 
     float: left; 
     overflow: hidden; 
-    margin: 0 15px 15px 0;
+    margin: 0 10px 10px 0;
     width: 200px;
     height: 200px;
     border: 1px solid #ccc;
     background-color: #ddd;
     -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
     -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
-    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+        box-shadow: 0 1px 5px rgba(0,0,0,0.9);
 }
 figcaption {
     width: 100%;
@@ -50,4 +47,30 @@ figure:last-of-type {
 .image:before { bottom: 10px; left: 10px; }
 .image figcaption { left: 0; bottom: -30%;}
 .image:hover figcaption { bottom: 0; }
+
+/* =====  Media Queries   ======  */
+
+@media only screen and (min-width:769px) and (max-width:959px) {
+    #container {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width:596px) and (max-width:768px) {
+    #container {
+        width: 73%;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:595px) {
+    #container {
+        width: 89%;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    #container {
+        width: 48%;
+    }
+}
 

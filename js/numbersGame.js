@@ -25,27 +25,12 @@ arrayOfImages.push({image:'images/numberGameImages/1_bee.png',value: 1, descript
                   {image:'images/numberGameImages/10_squares.png',value: 10, description: 'squares'}
                   );
 
-
-var getRandomNumber = function() {
-    return Math.floor(Math.random()*arrayOfImages.length)
+var addDropInClass = function(){
+    document.getElementById("image").className = "dropIn";
+    
 }
-
-var getImage = function(index){
-    return arrayOfImages[index].image; // getRandomNumber is called here to grab a random image from the array. It's returning an image to this var.
-}
-
-//get the value tied to the image that is being set
-var getImageValue = function(index){
-    return arrayOfImages[index].value;
-}
-
-//get the description tied to the image that is being set
-var getImageDescription = function(index){
-    return arrayOfImages[index].description;    
-}
-
-var setImage = function(image) {
-    document.getElementById("image").src = image;
+var addRefreshButton = function() {
+    $('#reset').delay(300).animate({"top": "270px"}).fadeIn(900);
 }
 
 var createButtons = function() {
@@ -63,6 +48,33 @@ var createButtons = function() {
         div.appendChild(addText); //appends text to the new div
         numberSelection = document.getElementById("numberSelection"); // gets the parent div
         numberSelection.appendChild(div); // adds new div to the parent div"numberSelection"
+    }
+}
+
+var getImage = function(index){
+    return arrayOfImages[index].image; // getRandomNumber is called here to grab a random image from the array. It's returning an image to this var.
+}
+
+var getImageDescription = function(index){
+    return arrayOfImages[index].description;    
+}
+
+var getImageValue = function(index){
+    return arrayOfImages[index].value;
+}
+
+var getRandomNumber = function() {
+    return Math.floor(Math.random()*arrayOfImages.length)
+}
+
+var score = 0;
+var keepScore = function(){
+    var numID = parseInt(event.target.id);
+    var imageValue = getImageValue(randomNumber);
+
+    if (numID === imageValue) {
+        score++; 
+        document.getElementById("score").innerHTML = score;  
     }
 }
 
@@ -85,6 +97,27 @@ var onButtonClick = function(event) {
     removeDropInClass(); 
 }
 
+var onResetButtonClick = function(){
+    addDropInClass();
+    $("#resultBox").animate({"top": "-302px"}, 600);
+    refresh();
+}
+
+var refresh = function(){
+    randomNumber = getRandomNumber();
+    setImage(getImage(randomNumber)); //getRandomImage is called to set the image in the HTML. 
+    setResultHTML("");
+    removeRefreshButton();
+}
+
+var removeDropInClass = function() {
+    document.getElementById("image").className = "";
+}
+
+var removeRefreshButton = function(){
+    $('#reset').hide();
+}
+
 var resultsDropDown = function(){
     var numID = parseInt(event.target.id);
     var imageValue = getImageValue(randomNumber);
@@ -98,46 +131,12 @@ var resultsDropDown = function(){
     }
 }
 
+var setImage = function(image) {
+    document.getElementById("image").src = image;
+}
+
 var setResultHTML = function(text){
     document.getElementById("results").innerHTML = text;
-}
-
-var addDropInClass = function(){
-    document.getElementById("image").className = "dropIn";
-    
-}
-var removeDropInClass = function() {
-    document.getElementById("image").className = "";
-}
-
-var addRefreshButton = function() {
-    $('#reset').delay(300).animate({"top": "270px"}).fadeIn(900);
-}
-var removeRefreshButton = function(){
-    $('#reset').hide();
-}
-var refresh = function(){
-    randomNumber = getRandomNumber();
-    setImage(getImage(randomNumber)); //getRandomImage is called to set the image in the HTML. 
-    setResultHTML("");
-    removeRefreshButton();
-}
-
-var onResetButtonClick = function(){
-    addDropInClass();
-    $("#resultBox").animate({"top": "-302px"}, 600);
-    refresh();
-}
-
-var score = 0;
-var keepScore = function(){
-    var numID = parseInt(event.target.id);
-    var imageValue = getImageValue(randomNumber);
-
-    if (numID === imageValue) {
-        score++; 
-        document.getElementById("score").innerHTML = score;  
-    }
 }
 
 refresh();

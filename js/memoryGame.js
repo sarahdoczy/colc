@@ -1,3 +1,30 @@
+var chooseCardsToPlayWith = function(array) {
+    var tempCardDeckArray = [];
+    
+    for (var i=0; i<numberOfCards; i++) { 
+        tempCardDeckArray.push(array[i]);
+    }
+    return tempCardDeckArray;
+}
+
+var compareCards = function(card1, card2) {
+    
+    //compare image source
+    var firstCard = card1.getElementsByClassName("faceUp")[0].getElementsByTagName("img")[0].src;
+    var secondCard = card2.getElementsByClassName("faceUp")[0].getElementsByTagName("img")[0].src;
+    if (firstCard == secondCard) {
+       return true;
+    } else {
+        return false;
+    
+    }
+}
+
+var clearNumberOfAttempts = function() {
+    count = 0;
+    document.getElementById("numberOfTries").innerHTML = "Number of Attempts: ";
+}
+
 var createCard = function(image) {
 
     var img = document.createElement("img");
@@ -20,23 +47,36 @@ var createCard = function(image) {
     return divPanel;
 }
 
-var onCardClick = function(event) {
-    flipCard(event.currentTarget);
-    setTimeout(runGameLogic, 1000, event.currentTarget);
-    numberOfClicks();
+function createGameBoard(imageArray, gameContainer) {
+    var cardDeck = chooseCardsToPlayWith(shuffle(imageArray));
+    var duplicatedCardsForGameBoard = getDuplicateArray(cardDeck); 
+    var shuffleDeckForGameBoard = shuffle(duplicatedCardsForGameBoard);
+        
+    for (var i=0; i<shuffleDeckForGameBoard.length; i++) {       
+        gameContainer.appendChild(createCard(shuffleDeckForGameBoard[i]));
+    }
+}
+
+var flipCard = function(div) {
+    if ($(div).hasClass('flip')) {
+        $(div).removeClass('flip');
+    } else {
+        $(div).addClass('flip');
+    }
 }
 
 var count = 0;
 var numberOfClicks = function() {
         count++;
-        //console.log(count);
         if (count%2 == 0) {
 	    document.getElementById("numberOfTries").innerHTML = "Number of Attempts: " + count/2;
        }
 }
-var clearNumberOfAttempts = function() {
-    count = 0;
-    document.getElementById("numberOfTries").innerHTML = "Number of Attempts: ";
+
+var onCardClick = function(event) {
+    flipCard(event.currentTarget);
+    setTimeout(runGameLogic, 1000, event.currentTarget);
+    numberOfClicks();
 }
 
 //TODO - "play again button" should clear current "#container", not add a new container.
@@ -62,23 +102,6 @@ var runGameLogic = function(card) {
     }
 }
 
-function createGameBoard(imageArray, gameContainer) {
-    var cardDeck = chooseCardsToPlayWith(shuffle(imageArray));
-    var duplicatedCardsForGameBoard = getDuplicateArray(cardDeck); 
-    var shuffleDeckForGameBoard = shuffle(duplicatedCardsForGameBoard);
-        
-    for (var i=0; i<shuffleDeckForGameBoard.length; i++) {       
-        gameContainer.appendChild(createCard(shuffleDeckForGameBoard[i]));
-    }
-}
-
-var flipCard = function(div) {
-    if ($(div).hasClass('flip')) {
-        $(div).removeClass('flip');
-    } else {
-        $(div).addClass('flip');
-    }
-}
 //  ====    todo      ========
 var disableFlipMethod = function(div) {
     console.log("matching! disable flip");
@@ -116,27 +139,7 @@ var getDuplicateArray = function(array) {
 	return tempArray;
 }
 
-var chooseCardsToPlayWith = function(array) {
-    var tempCardDeckArray = [];
-    
-    for (var i=0; i<numberOfCards; i++) { 
-        tempCardDeckArray.push(array[i]);
-    }
-    return tempCardDeckArray;
-}
 
-var compareCards = function(card1, card2) {
-    
-    //compare image source
-    var firstCard = card1.getElementsByClassName("faceUp")[0].getElementsByTagName("img")[0].src;
-    var secondCard = card2.getElementsByClassName("faceUp")[0].getElementsByTagName("img")[0].src;
-    if (firstCard == secondCard) {
-       return true;
-    } else {
-        return false;
-    
-    }
-}
 
 var onResetButtonClick = function(){
     gameContainer.innerHTML = "";

@@ -32,9 +32,9 @@
 }
 
 #bottomContainer {
-	width: 95%;
-	margin: 150px auto 0 auto;
-	position:relative; 
+    width: 95%;
+    margin: 150px auto 0 auto;
+    position:relative; 
 }
 
 #bottomContainer .box_container { display: none; width: 25%; float: left; margin: 0 auto; }
@@ -56,9 +56,10 @@
     text-align: center;
     color: #6B5D70;
     text-shadow: 1px 1px 1px #FFFBEF;
-    bottom: 4.5em;
-    right: 0.0em
+    bottom: 5.5em;
+    right: 0.0em;
 }
+
 a {
     text-decoration: none;
 }
@@ -68,14 +69,11 @@ a {
     width: 98%;
 }
 
-
 /* =====  Media Queries   ======  */
-
 @media only screen and (min-width:769px) and (max-width:959px) {
     .caption {
 	bottom: 3.5em;
     }  
-
 }
 
 @media only screen and (min-width:596px) and (max-width:768px) {
